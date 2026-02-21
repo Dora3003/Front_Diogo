@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área do professor</title>
+    <link rel="stylesheet" href="Register.css">
+    <link rel="stylesheet" href="TeacherPage.css">
+    <script src="ApiMethods.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div id="schoolName">
+            <img src="imagens/logo.svg" alt="">
+            <h1>Escola <span style="color: #2894AC;">Nexus</span></h1>
+        </div>
+        <div id="headerComponents">
+            <h3><a href="InicialPage.html">Home</a></h3>
+            <h3><a href="InicialPage.html#contact">Contatos</a></h3>
+            <h3><a href="LogIn.html">Perfil</a></h3>
+        </div>
+    </div>
+
+    <section>
+        <input type="text" placeholder="Pesquisar matrícula...">
+        <select>
+            <option value="todas">Todas</option>
+            <option value="matematica">Matemática</option>
+            <option value="portugues">Português</option>
+            <option value="historia">História</option>
+            <option value="geografia">Geografia</option>
+        </select>
+    </section>
+
+    <div class="studentsInformation">
+        <h1>Alunos</h1>
+    </div>
+    <div id="popupInfo" class="popUp">
+        <div class="popInfo">
+            <h1>Observação</h1>
+            <textarea placeholder="Adicionar observação"></textarea>
+            <button>Adicionar</button>
+            <button onclick="fecharPopup('popupInfo')">Cancelar</button>
+        </div>
+    </div>
+    <div id="popupGrades" class="popUp">
+        <div class="popGrades">
+            <h1>Lançar Notas</h1>
+
+            <section>
+                <h2>N1</h2>
+                <input type="number" required>
+            </section>
+
+            <section>
+                <h2>N2</h2>
+                <input type="number" required>
+            </section>
+
+            <section>
+                <h2>Média final</h2>
+                <input type="number" required>
+            </section>
+
+            <button>Lançar</button>
+            <button onclick="fecharPopup('popupGrades')">Cancelar</button>
+        </div>
+    </div>
+
+    <!-- BOTÕES PARA ABRIR -->
+    <button onclick="abrirPopup('popupInfo')">Abrir observações</button>
+    <button onclick="abrirPopup('popupGrades')">Abrir notas</button>
+
+</body>
+</html>

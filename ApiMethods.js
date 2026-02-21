@@ -1,6 +1,14 @@
 var urlBase = "https://proj-diegoback.onrender.com"
 
-function cadastrar(nome, email, senha) {
+function abrirPopup(id) {
+    document.getElementById(id).style.display = "flex";
+}
+
+function fecharPopup(id) {
+    document.getElementById(id).style.display = "none";
+}
+
+function registerStudent(nome, email, senha) {
     fetch(urlBase + "/aluno/create",
         {
             headers: {
@@ -41,15 +49,33 @@ function login(matricula, senha) {
     )
         .then(function (res) {
             const resposta = res.status;
-            if (resposta == 20) {
-                window.alert("Cadastro realizado com sucesso! ")
+            if (resposta == 200) {
+                window.alert("Login realizado com sucesso! ")
                 redirecionar("StudentPage.html")
             }
         })
         .catch(function (res) { console.log(res.status) })
 }
 
-
+// function listStudents() {
+//     fetch(urlBase + "/aluno/list",
+//         {
+//             headers: {
+//                 'Accept': "application/json",
+//                 'Content-type': "application/json"
+//             },
+//             method: "GET"
+//         }
+//     )
+//         .then(function (res) {
+//             const resposta = res.status;
+//             if (resposta == 200) {
+//                 window.alert("Login realizado com sucesso! ")
+//                 redirecionar("StudentPage.html")
+//             }
+//         })
+//         .catch(function (res) { console.log(res.status) })
+//}
 
 function redirecionar(nextPage) {
     setTimeout(function () {
