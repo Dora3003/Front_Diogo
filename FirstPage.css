@@ -1,5 +1,5 @@
 body {
-    background-color: #fcf3e7;
+    background-color: #F9E0BC;
     margin: 0%;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
@@ -22,7 +22,7 @@ body {
     margin-bottom: 3%;
 }
 
-#headerComponents {
+.headerComponents {
     width: 20%;
     padding: 10px;
     text-align: center;
@@ -31,13 +31,17 @@ body {
     justify-content: space-around;
     align-items: center;
 
+    a{
+        color: #2894AC;
+    }
+
     img {
         width: 2%;
         height: auto;
     }
 }
 
-#schoolName {
+.schoolName {
     width: 25%;
     display: flex;
     justify-content: space-evenly;
@@ -91,13 +95,13 @@ body {
     }
 }
 
-.cards {
+#cards {
     display: flex;
     justify-content: space-around;
     margin-top: 2%;
 }
 
-section {
+.individualCards{
     color: #fcf3e7;
     background-color: #ED7921;
     width: 25%;
@@ -108,7 +112,7 @@ section {
 }
 
 .thirdInformations {
-    background-color: #fcf3e7;
+    background-color: #F9E0BC;
     margin-bottom: 4%;
 }
 
